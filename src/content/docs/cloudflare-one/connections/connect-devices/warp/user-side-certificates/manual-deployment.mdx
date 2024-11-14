@@ -589,7 +589,11 @@ Google Apps Manager (GAM) uses its own certificate store. To add a Cloudflare ce
 
 ### AWS CLI
 
-If you're using the AWS CLI, you need to set the `AWS_CA_BUNDLE` environment variable to use a Cloudflare root certificate. Commands are available for different operating systems in the [AWS instructions](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html).
+If you are using the AWS CLI, you need to set the `AWS_CA_BUNDLE` environment variable to use a Cloudflare root certificate:
+
+1. [Download a Cloudflare certificate](#download-the-cloudflare-root-certificate) in `.pem` format.
+2. In a terminal, set the [`AWS_CA_BUNDLE` environment variable](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html) to the location of your certificate depending on your operating system.
+3. Restart your terminal.
 
 ### PHP Composer
 
